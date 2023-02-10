@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+/*色碼*/
+$slbk-color:black;
+$libk-color: rgb(226, 208, 43);
+$font-color:#3D1101;
+$sl-font-color:white;
+$font-b:24px;
+$font-l:18px;
+$font-m:16px;
+$font-s:14px;
+
+
+
+.container{
+    background-color: #eee9e7;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.login-title{
+    text-align: center;
+    padding-bottom:0.8em;
+    p{
+        color: $font-color;
+        line-height: 1.2;
+        font-size:$font-l;
+        text-align: center;
+    }
+}
+
+
+.form-login{
+    max-width: 375px;
+    padding:0 1em 1em 1em;
+    margin:0 auto;
+    border-top:3px solid #F56C23 ;
+    box-shadow: rgb(0 0 0 / 30%) 1px 1px 5px;
+    border-radius: 2px;
+
+
+
+    p{
+        color: $font-color;
+        font-size:$font-l;
+        font-weight:bold;
+        text-align: center;
+
+    }
+
+    .pure-controls{
+        text-align: center;
+    }
+
+}
+
+
+    .pure-form-message{
+        text-align: left;
+        color: #F56C23 ;
+        font-size: $font-s;
+    }
+
+//form 間距離//
+
+.inputwithIcon2{
+    margin:1rem;
+    input[type="text"]{
+      display:inline-block;
+      width: 100%;
+      font-family: FontAwesome;
+      font-weight: 700;
+      font-size: 1rem;
+      padding:.3rem;
+      outline:none;
+      color: #3f3f3f;
+      margin-bottom:1em;
+
+    }
+
+    label{
+      display: block;
+      margin-bottom: 0.2em;
+    }
+  }

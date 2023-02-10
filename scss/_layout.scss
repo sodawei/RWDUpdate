@@ -1,0 +1,307 @@
+
+
+img{
+	max-width: 100%;
+	height:auto;
+}
+
+/*色碼*/
+$slbk-color:black;
+$libk-color: rgb(226, 208, 43);
+$font-color:#3D1101;
+$sl-font-color:white;
+$font-b:24px;
+$font-l:18px;
+$font-m:16px;
+$font-s:14px;
+
+/*ＲＷＤ*/
+@mixin desktop{
+    @media (max-width: 1280px) {
+        @content
+    }
+}
+
+@mixin pad{
+    @media (max-width: 768px) {
+        @content
+    }
+}
+
+
+@mixin ph6{
+    @media (max-width: 375px) {
+        @content
+    }
+}
+
+/*尺寸*/
+$size:1024px;
+
+.warp{
+    max-width:$size;
+    margin: 0 auto;
+}
+
+.slide{
+    height:420px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background: url("../img/header_desktop.png");
+
+    @include ph6(){
+
+        background-image:url("../img/header_mob.png");
+            }
+
+
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap:nowrap;
+	background-color: black;
+    
+    @include ph6(){
+
+        flex-wrap: wrap;
+            }
+    
+
+}
+
+.bt-toggle{
+	display: none;
+	color: $sl-font-color;
+	font-size: 24px;
+
+    @include ph6(){
+
+        display:inline-block;
+            }
+}
+
+
+.logo{
+	width:70% ;
+	padding: 0 0 0 1em;
+
+    @include ph6(){
+    
+		width: 80%;
+		padding: 1em 0 1em 0;
+            }
+    
+    a{
+        display: block;
+
+        @include ph6(){
+
+            width: 50%;
+            padding-left: 3.2em;
+                }
+    }
+
+}
+
+
+
+.menu{
+    display: flex;
+	flex-direction: row;
+	width: 50%;
+
+    @include ph6(){
+        display: none;
+        width: 100%;
+        z-index: 2;
+            }
+
+li{
+    text-align: center;
+    width: 100%;
+
+
+    a{
+        display: block;
+	    text-decoration: none;
+	    padding: 0.5em;
+        font-size: $font-l;
+    	color: $sl-font-color;
+	    background-color:$slbk-color;
+
+        @include ph6(){
+            font-size: 18px;
+            padding: 0.8em;
+            letter-spacing: 0.8em;
+            text-indent: 0.8em;
+            background-color:$font-color;
+                }
+
+    }
+
+    a:hover{
+        background:$font-color;
+    }
+
+}
+
+.menu .active{
+    @include ph6(){
+        display: inline-block;
+                }
+}
+
+}
+
+/*slide標題*/
+
+.title-1 {
+
+    margin:100px auto 0 auto;
+	width:40%;
+	text-align: center;
+	background-color:rgba(18, 10, 10, 0.5);
+	z-index: 0;
+
+    @include ph6(){
+        position: absolute;
+        top:40px;
+        width: 100%;
+
+                }
+}
+
+    h2{
+        margin: 0 0 15px 0;
+        font-size: 30px;
+        line-height: 1.2em;
+        color: $sl-font-color;
+        z-index:2;
+    }
+
+    p{
+        line-height: 2em;
+        color: $sl-font-color;
+
+        @include ph6(){
+            font-size: 18px;
+            line-height: 1.5em;
+                    }
+
+    }
+    
+
+
+
+    
+
+    @media (max-width:767px) and (min-width:376px) {
+     
+        .title-1 h2{
+        margin: 10px 0 0 0;
+        font-size: 24px;
+        line-height:1.5em;
+    } 
+    
+        .title-1 p{
+        font-size: 18px;
+        line-height: 1.5em;
+        }
+     }
+    
+/*slide 黑板*/
+     .menu-screen{
+        display:none;
+        height: 362px;
+        background-color:rgba(0, 0, 0, 0.6);
+
+        @include ph6(){
+            display:none;
+            position: absolute;
+            width: 100%;
+            top:59px;
+            left:0px;
+            z-index: 1;
+            background-color:rgba(0, 0, 0, 0.6);
+                    }
+    }
+
+/*footer*/
+
+.footer{
+display: flex;
+padding: 54px 2em 54px 2em;
+background:#eee9e7;
+
+@include ph6(){
+    flex-direction: column;
+    padding: 30px 1em 30px 1em;
+ 
+            }
+
+    p{
+        color:$font-color;
+        line-height: 1.5;
+        font-size: $font-m;
+
+        @include ph6(){
+
+            padding: 5px 0 5px 0;
+            line-height: 1.2;
+         
+                    }
+
+    }
+
+    h2{
+        color:$font-color;
+        font-size: $font-b;
+
+        }
+}
+
+
+
+.about, .content{
+    width: 22%;
+    margin-right: 0.5em;
+
+    @include ph6(){
+    width: 100%;
+    margin: 10px 0 10px 0;
+                }
+}
+
+.social{
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include ph6(){
+        width: 50%;
+        margin: 10px auto 0 auto;
+                   }
+    .f-logo{
+        margin-top: 10px;
+        display: flex;
+
+        @include ph6(){
+            margin:auto;
+                       }
+        li{
+            margin: 0.5em;
+
+            @include ph6(){
+                margin:1em;
+                           }
+        }
+
+    }
+}
+
+
+/*container*/

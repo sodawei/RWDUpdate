@@ -1,0 +1,522 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 400;
+}
+
+/*!
+Pure v0.6.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.btn {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*csslint outline-none:false*/
+.btn {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.8); /* rgba supported */
+  border: 1px solid #999; /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-hover,
+.btn:hover,
+.btn:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#1a000000",GradientType=0);
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-active,
+.btn:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+  border-color: #000 \9 ;
+}
+
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.btn-primary,
+.btn-selected,
+a.btn-primary,
+a.btn-selected {
+  background-color: rgb(0, 120, 231);
+  color: #fff;
+}
+
+.btn-login {
+  background-color: #F56C23;
+  width: 125px;
+}
+
+.btn-register {
+  background-color: #000000 35%;
+  width: 125px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*色碼*/
+/*ＲＷＤ*/
+/*尺寸*/
+.warp {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.slide {
+  height: 420px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url("../img/header_desktop.png");
+}
+@media (max-width: 375px) {
+  .slide {
+    background-image: url("../img/header_mob.png");
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: black;
+}
+@media (max-width: 375px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+.bt-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+}
+@media (max-width: 375px) {
+  .bt-toggle {
+    display: inline-block;
+  }
+}
+
+.logo {
+  width: 70%;
+  padding: 0 0 0 1em;
+}
+@media (max-width: 375px) {
+  .logo {
+    width: 80%;
+    padding: 1em 0 1em 0;
+  }
+}
+.logo a {
+  display: block;
+}
+@media (max-width: 375px) {
+  .logo a {
+    width: 50%;
+    padding-left: 3.2em;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+@media (max-width: 375px) {
+  .menu {
+    display: none;
+    width: 100%;
+    z-index: 2;
+  }
+}
+.menu li {
+  text-align: center;
+  width: 100%;
+}
+.menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+}
+@media (max-width: 375px) {
+  .menu li a {
+    font-size: 18px;
+    padding: 0.8em;
+    letter-spacing: 0.8em;
+    text-indent: 0.8em;
+    background-color: #3D1101;
+  }
+}
+.menu li a:hover {
+  background: #3D1101;
+}
+@media (max-width: 375px) {
+  .menu .menu .active {
+    display: inline-block;
+  }
+}
+
+/*slide標題*/
+.title-1 {
+  margin: 100px auto 0 auto;
+  width: 40%;
+  text-align: center;
+  background-color: rgba(18, 10, 10, 0.5);
+  z-index: 0;
+}
+@media (max-width: 375px) {
+  .title-1 {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+  line-height: 1.2em;
+  color: white;
+  z-index: 2;
+}
+
+p {
+  line-height: 2em;
+  color: white;
+}
+@media (max-width: 375px) {
+  p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 376px) {
+  .title-1 h2 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .title-1 p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+/*slide 黑板*/
+.menu-screen {
+  display: none;
+  height: 362px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 375px) {
+  .menu-screen {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    left: 0px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/*footer*/
+.footer {
+  display: flex;
+  padding: 54px 2em 54px 2em;
+  background: #eee9e7;
+}
+@media (max-width: 375px) {
+  .footer {
+    flex-direction: column;
+    padding: 30px 1em 30px 1em;
+  }
+}
+.footer p {
+  color: #3D1101;
+  line-height: 1.5;
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .footer p {
+    padding: 5px 0 5px 0;
+    line-height: 1.2;
+  }
+}
+.footer h2 {
+  color: #3D1101;
+  font-size: 24px;
+}
+
+.about, .content {
+  width: 22%;
+  margin-right: 0.5em;
+}
+@media (max-width: 375px) {
+  .about, .content {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+}
+
+.social {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 375px) {
+  .social {
+    width: 50%;
+    margin: 10px auto 0 auto;
+  }
+}
+.social .f-logo {
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 375px) {
+  .social .f-logo {
+    margin: auto;
+  }
+}
+.social .f-logo li {
+  margin: 0.5em;
+}
+@media (max-width: 375px) {
+  .social .f-logo li {
+    margin: 1em;
+  }
+}
+
+/*container*/
+/*色碼*/
+/*ＲＷＤ*/
+.container {
+  max-width: 100%;
+  background-color: #eee9e7;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.login-title {
+  text-align: center;
+  padding-bottom: 0.8em;
+}
+.login-title p {
+  color: #3D1101;
+  line-height: 1.2;
+  font-size: 18px;
+  text-align: center;
+}
+
+.form-register {
+  max-width: 60%;
+  padding: 0 1em 1em 1em;
+  margin: 0 auto;
+  border-top: 3px solid #F56C23;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px;
+  border-radius: 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .form-register {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .form-register {
+    max-width: 100%;
+  }
+}
+.form-register .register-title {
+  width: 100%;
+}
+.form-register .register-title p {
+  color: #3D1101;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .form-register .register-title p {
+    margin: 1em 0 1em 0;
+  }
+}
+.form-register .text {
+  max-width: 50%;
+  margin-left: 0.5em;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .form-register .text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .form-register .text {
+    max-width: 100%;
+    margin-left: 0em;
+    margin-bottom: 1em;
+  }
+}
+.form-register .text p {
+  color: #3D1101;
+}
+
+.form-login {
+  max-width: 100%;
+}
+
+.pure-controls {
+  text-align: right;
+}
+
+.pure-form-message {
+  text-align: left;
+  color: #F56C23;
+  font-size: 14px;
+}
+
+.inputwithIcon2 {
+  margin: 1rem;
+}
+.inputwithIcon2 input[type=text] {
+  display: inline-block;
+  width: 100%;
+  font-family: FontAwesome;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.3rem;
+  outline: none;
+  color: #3f3f3f;
+  margin-bottom: 1em;
+}
+.inputwithIcon2 label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.btn-register {
+  background-color: #F56C23;
+  width: 125px;
+}

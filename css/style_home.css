@@ -1,0 +1,696 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 400;
+}
+
+/*!
+Pure v0.6.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.btn {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*csslint outline-none:false*/
+.btn {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.8); /* rgba supported */
+  border: 1px solid #999; /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-hover,
+.btn:hover,
+.btn:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#1a000000",GradientType=0);
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-active,
+.btn:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+  border-color: #000 \9 ;
+}
+
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.btn-primary,
+.btn-selected,
+a.btn-primary,
+a.btn-selected {
+  background-color: rgb(0, 120, 231);
+  color: #fff;
+}
+
+.inputwithIcon2 {
+  margin: 1rem;
+}
+.inputwithIcon2 input[type=text] {
+  display: inline-block;
+  width: 100%;
+  font-family: FontAwesome;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.3rem;
+  outline: none;
+  color: #3f3f3f;
+  margin-bottom: 1em;
+}
+.inputwithIcon2 label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.pure-radio {
+  margin: 0.5em 0 0.5em 0;
+}
+
+.pure-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-send {
+  background-color: #F56C23;
+  width: 125px;
+}
+
+.btn-cancel {
+  background-color: #a1a1a1;
+  width: 125px;
+  margin-right: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*色碼*/
+/*ＲＷＤ*/
+/*尺寸*/
+.warp {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.slide {
+  height: 420px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url("../img/header_desktop.png");
+}
+@media (max-width: 375px) {
+  .slide {
+    background-image: url("../img/header_mob.png");
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: black;
+}
+@media (max-width: 375px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+.bt-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+}
+@media (max-width: 375px) {
+  .bt-toggle {
+    display: inline-block;
+  }
+}
+
+.logo {
+  width: 70%;
+  padding: 0 0 0 1em;
+}
+@media (max-width: 375px) {
+  .logo {
+    width: 80%;
+    padding: 1em 0 1em 0;
+  }
+}
+.logo a {
+  display: block;
+}
+@media (max-width: 375px) {
+  .logo a {
+    width: 50%;
+    padding-left: 3.2em;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+@media (max-width: 375px) {
+  .menu {
+    display: none;
+    width: 100%;
+    z-index: 2;
+  }
+}
+.menu li {
+  text-align: center;
+  width: 100%;
+}
+.menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+}
+@media (max-width: 375px) {
+  .menu li a {
+    font-size: 18px;
+    padding: 0.8em;
+    letter-spacing: 0.8em;
+    text-indent: 0.8em;
+    background-color: #3D1101;
+  }
+}
+.menu li a:hover {
+  background: #3D1101;
+}
+@media (max-width: 375px) {
+  .menu .menu .active {
+    display: inline-block;
+  }
+}
+
+/*slide標題*/
+.title-1 {
+  margin: 100px auto 0 auto;
+  width: 40%;
+  text-align: center;
+  background-color: rgba(18, 10, 10, 0.5);
+  z-index: 0;
+}
+@media (max-width: 375px) {
+  .title-1 {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+  line-height: 1.2em;
+  color: white;
+  z-index: 2;
+}
+
+p {
+  line-height: 2em;
+  color: white;
+}
+@media (max-width: 375px) {
+  p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 376px) {
+  .title-1 h2 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .title-1 p {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+/*slide 黑板*/
+.menu-screen {
+  display: none;
+  height: 362px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 375px) {
+  .menu-screen {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    left: 0px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/*footer*/
+.footer {
+  display: flex;
+  padding: 54px 2em 54px 2em;
+  background: #eee9e7;
+}
+@media (max-width: 375px) {
+  .footer {
+    flex-direction: column;
+    padding: 30px 1em 30px 1em;
+  }
+}
+.footer p {
+  color: #3D1101;
+  line-height: 1.5;
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .footer p {
+    padding: 5px 0 5px 0;
+    line-height: 1.2;
+  }
+}
+.footer h2 {
+  color: #3D1101;
+  font-size: 24px;
+}
+
+.about, .content {
+  width: 22%;
+  margin-right: 0.5em;
+}
+@media (max-width: 375px) {
+  .about, .content {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+}
+
+.social {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 375px) {
+  .social {
+    width: 50%;
+    margin: 10px auto 0 auto;
+  }
+}
+.social .f-logo {
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 375px) {
+  .social .f-logo {
+    margin: auto;
+  }
+}
+.social .f-logo li {
+  margin: 0.5em;
+}
+@media (max-width: 375px) {
+  .social .f-logo li {
+    margin: 1em;
+  }
+}
+
+/*container*/
+/*色碼*/
+/*ＲＷＤ*/
+.container {
+  max-width: 1024px;
+  background-color: #eee9e7;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.headline-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.headline-1 .line-dash1 {
+  position: absolute;
+  top: 32px;
+  width: 40%;
+  height: 0.1em;
+  background-color: #3D1101;
+}
+@media (max-width: 375px) {
+  .headline-1 .line-dash1 {
+    top: 29px;
+    width: 77%;
+  }
+}
+.headline-1 .line-dash2 {
+  position: absolute;
+  top: 32px;
+  width: 18%;
+  height: 0.1em;
+  background-color: #eee9e7;
+  z-index: 1;
+}
+@media (max-width: 375px) {
+  .headline-1 .line-dash2 {
+    top: 29px;
+    width: 55%;
+  }
+}
+.headline-1 p {
+  text-align: center;
+  color: #3D1101;
+}
+
+.secret {
+  display: flex;
+  padding: 2em 3em 2em 3em;
+}
+@media (max-width: 375px) {
+  .secret {
+    padding: 1em 1em 1em 1em;
+    flex-direction: column;
+  }
+}
+.secret li {
+  text-align: center;
+  width: 30%;
+  margin: 0 1em 0 1em;
+}
+@media (max-width: 375px) {
+  .secret li {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+}
+.secret h2 {
+  margin-top: 1em;
+  text-align: center;
+  color: #3D1101;
+  font-size: 16px;
+}
+.secret p {
+  text-align: left;
+  color: #3D1101;
+  width: 100%;
+  line-height: 24px;
+}
+@media (max-width: 375px) {
+  .secret p {
+    text-align: justify;
+    text-justify: auto;
+  }
+}
+
+.chef {
+  background-color: #3D1101;
+  padding: 30px 0.1em 30px 0.1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.chef .img-chef {
+  max-width: 50%;
+}
+@media (max-width: 375px) {
+  .chef .img-chef {
+    max-width: 100%;
+  }
+}
+.chef .introduce {
+  max-width: 50%;
+  padding: 1em;
+}
+@media (max-width: 375px) {
+  .chef .introduce {
+    max-width: 100%;
+  }
+}
+.chef .introduce .headline-2 {
+  font-size: 24px;
+}
+.chef .introduce .name {
+  font-size: 14px;
+}
+@media (max-width: 375px) {
+  .chef .introduce .name {
+    margin-bottom: 1em;
+  }
+}
+.chef .introduce .words-chef {
+  text-align: left;
+  width: 100%;
+  line-height: 26px;
+}
+@media (max-width: 375px) {
+  .chef .introduce .words-chef {
+    text-align: justify;
+    text-justify: auto;
+  }
+}
+
+.feedback {
+  padding-bottom: 3em;
+}
+.feedback .headline3 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.feedback .headline3 p {
+  font-size: 24px;
+  color: #3D1101;
+}
+.feedback ul {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .feedback ul {
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 375px) {
+  .feedback ul {
+    flex-wrap: wrap;
+  }
+}
+.feedback ul li {
+  width: 33%;
+  display: flex;
+  padding: 0.5em;
+}
+@media (max-width: 375px) {
+  .feedback ul li {
+    width: 100%;
+    padding: 0em;
+    padding-bottom: 2em;
+  }
+}
+.feedback ul li .avatar {
+  max-width: 100%;
+  margin-left: 0.5em;
+}
+@media (max-width: 375px) {
+  .feedback ul li .avatar {
+    margin-left: 1.5em;
+  }
+}
+.feedback ul li .word-ava {
+  width: 60%;
+  margin: 0 0.2em 0 1.5em;
+}
+.feedback ul li p {
+  color: #3D1101;
+  line-height: 22px;
+}
+.feedback ul li .ID {
+  margin-bottom: 0.5em;
+}
+.feedback ul li .rank {
+  text-align: right;
+}
+
+.booking {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  background-color: #f6f4f3;
+}
+.booking .headline4 {
+  text-align: center;
+}
+.booking .headline4 p {
+  font-size: 24px;
+  color: #3D1101;
+}
+.booking .info {
+  margin: 0 auto;
+  display: flex;
+  padding: 1em 2em 1em 2em;
+}
+@media (max-width: 375px) {
+  .booking .info {
+    flex-direction: column;
+  }
+}
+.booking .map {
+  max-width: 75%;
+}
+@media (max-width: 375px) {
+  .booking .map {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.form-login {
+  max-width: 375px;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+@media (max-width: 375px) {
+  .form-login .inputwithIcon2 {
+    padding-right: 15px;
+  }
+}
+.form-login p {
+  color: #3D1101;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.form-login .pure-controls {
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .form-login .pure-controls {
+    padding-right: 22px;
+  }
+}
+.form-login .pure-form-message {
+  text-align: left;
+  color: #3D1101;
+  font-size: 14px;
+}
